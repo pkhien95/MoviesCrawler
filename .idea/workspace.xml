@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3a9dabfb-2c4f-465c-a664-3becb7dee87e" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="514">
+              <caret line="113" column="4" lean-forward="false" selection-start-line="113" selection-start-column="4" selection-end-line="113" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jwplayer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/jwplayer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/test">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="111">
+              <caret line="365" column="37" lean-forward="false" selection-start-line="365" selection-start-column="25" selection-end-line="365" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>video</find>
+      <find>a</find>
+      <find>jw-video jw-reset</find>
+      <find>modal</find>
+      <find>&lt;video</find>
+      <find>media-player</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/routes/jwplayer.js" />
+        <option value="$PROJECT_DIR$/routes/test" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="726" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MoviesCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MoviesCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MoviesCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MoviesCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="javascript.nodejs.core.library.configured.version" value="6.9.5" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://123movies.is" />
+          <option name="urlPath" value="/film/yu-gi-oh-season-4-english-audio-19656/watching.html" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="max-age=0" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="User-Agent" />
+                <option name="value" value="Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Mobile Safari/537.36" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Referer" />
+                <option name="value" value="https://123movies.is/film/yu-gi-oh-season-4-english-audio-19656" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cookie" />
+                <option name="value" value="__test; __test; user_geo=0; domain-alert=1; subscribe=1; 0e9d1e358ae7553fbefadb02c2f3ef42=d652bc2731a7f3523181212f049f7bee; 5318d346923246430ceb5480b52511fc=b5830ad086a78f285a0c847862ddfcd2; 9bebd32d83d85ac3ecda71da752315d2=cccb86d0002bb9596b5b2fee4bb6d7cc; notice-favorite-19648=true; pop-today=true; __atssc=facebook%3B4; __test; notice-favorite-19656=true; __zlcmid=fLgGWYlnmgQShd; __PPU_SESSION_1_366832_false=1488464552643|3|1488464808881|3|1; 6af2da7dbd3dfdf2b740953645966897=3382ae6bff06ff6abaa512e108d0d9db; _ga=GA1.2.331532365.1488464471; __atuvc=55%7C9; __atuvs=58b86a5341b493bb019; MarketGidStorage=%7B%220%22%3A%7B%22svspr%22%3A%22https%3A%2F%2Fl.facebook.com%2F%22%2C%22svsds%22%3A51%2C%22TejndEEDj%22%3A%22MTQ4ODQ2NDQ3MTQ1NTQ5OTM0OTAwMQ%3D%3D%22%7D%2C%22C49934%22%3A%7B%22page%22%3A1%2C%22time%22%3A1488482096494%7D%2C%22C49904%22%3A%7B%22page%22%3A20%2C%22time%22%3A1488485377649%7D%7D" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Accept-Language" />
+                <option name="value" value="en-US,en;q=0.8,vi;q=0.6" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Accept-Encoding" />
+                <option name="value" value="gzip, deflate, sdch, br" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://123movies.is" />
+          <option name="urlPath" value="/film/yu-gi-oh-season-4-english-audio-19656/watching.html" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="max-age=0" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="User-Agent" />
+                <option name="value" value="Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Mobile Safari/537.36" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Referer" />
+                <option name="value" value="https://123movies.is/film/yu-gi-oh-season-4-english-audio-19656" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cookie" />
+                <option name="value" value="__test; __test; user_geo=0; domain-alert=1; subscribe=1; 0e9d1e358ae7553fbefadb02c2f3ef42=d652bc2731a7f3523181212f049f7bee; 5318d346923246430ceb5480b52511fc=b5830ad086a78f285a0c847862ddfcd2; 9bebd32d83d85ac3ecda71da752315d2=cccb86d0002bb9596b5b2fee4bb6d7cc; notice-favorite-19648=true; pop-today=true; __atssc=facebook%3B4; __test; notice-favorite-19656=true; __zlcmid=fLgGWYlnmgQShd; __PPU_SESSION_1_366832_false=1488464552643|3|1488464808881|3|1; 6af2da7dbd3dfdf2b740953645966897=3382ae6bff06ff6abaa512e108d0d9db; _ga=GA1.2.331532365.1488464471; __atuvc=55%7C9; __atuvs=58b86a5341b493bb019; MarketGidStorage=%7B%220%22%3A%7B%22svspr%22%3A%22https%3A%2F%2Fl.facebook.com%2F%22%2C%22svsds%22%3A51%2C%22TejndEEDj%22%3A%22MTQ4ODQ2NDQ3MTQ1NTQ5OTM0OTAwMQ%3D%3D%22%7D%2C%22C49934%22%3A%7B%22page%22%3A1%2C%22time%22%3A1488482096494%7D%2C%22C49904%22%3A%7B%22page%22%3A20%2C%22time%22%3A1488485377649%7D%7D" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://123movies.is" />
+          <option name="urlPath" value="/film/yu-gi-oh-season-4-english-audio-19656/watching.html" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="User-Agent" />
+                <option name="value" value="Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Mobile Safari/537.36" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://123movies.is" />
+          <option name="urlPath" value="/film/yu-gi-oh-season-4-english-audio-19656/watching.html" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="User-Agent" />
+                <option name="value" value="Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.4; en-US; rv:1.9.2.2) Gecko/20100316 Firefox/3.6.2" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://123movies.is" />
+          <option name="urlPath" value="/film/yu-gi-oh-season-4-english-audio-19656/watching.html" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="User-Agent" />
+                <option name="value" value="Google Chome" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://123movies.is" />
+          <option name="urlPath" value="/film/yu-gi-oh-season-4-english-audio-19656" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="User-Agent" />
+                <option name="value" value="Google Chome" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://123movies.is" />
+          <option name="urlPath" value="/film/yu-gi-oh-season-4-english-audio-19656" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://123movies.is" />
+          <option name="urlPath" value="/film/yu-gi-oh-season-4-english-audio-19656/watching.html" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://123movies.is" />
+          <option name="urlPath" value="/ajax/movie_load_info/19637" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Node.js.bin/www">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Node.js.bin/www" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3a9dabfb-2c4f-465c-a664-3becb7dee87e" name="Default" comment="" />
+      <created>1488468918171</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1488468918171</updated>
+      <workItem from="1488468937415" duration="5739000" />
+      <workItem from="1488474936328" duration="9502000" />
+      <workItem from="1488508066832" duration="1606000" />
+      <workItem from="1488510545495" duration="401000" />
+      <workItem from="1488511107734" duration="8621000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="25869000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1280" height="726" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25416997" sideWeight="0.49056605" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25416997" sideWeight="0.509434" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35962147" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32649842" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39589906" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7507886" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/index.js</url>
+          <line>152</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="16" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="60" column="7" lean-forward="false" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/jwplayer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1091">
+          <caret line="74" column="4" lean-forward="true" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/test">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="365" column="37" lean-forward="false" selection-start-line="365" selection-start-column="25" selection-end-line="365" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/jwplayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="113" column="4" lean-forward="false" selection-start-line="113" selection-start-column="4" selection-end-line="113" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
