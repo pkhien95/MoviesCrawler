@@ -117,7 +117,7 @@ function getMovieInfo(options, callback) {
         leftContainer.children('p').eq(1).find('a').each(function (index, element) {
             movieInfo.actor.push($(this).attr('title'));
         });
-        leftContainer.children('p').eq(1).find('a').each(function (index, element) {
+        leftContainer.children('p').eq(2).find('a').each(function (index, element) {
             movieInfo.director.push($(this).attr('title'));
         });
         callback(movieInfo);
