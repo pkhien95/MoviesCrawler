@@ -132,7 +132,7 @@ function getMovieInfo(options, callback) {
         movieInfo.year = rightContainer.children('p').eq(3).text().replace("Release: ", '');
 
         movieInfo.rating = $('#movie-mark').text();
-        movieInfo.description = $('.desc').text();
+        movieInfo.description = $('.desc').children().first().text();
         callback(movieInfo);
     })
 }
