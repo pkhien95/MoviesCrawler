@@ -126,9 +126,10 @@ function getMovieInfo(options, callback) {
 
         var rightContainer = $('.mvici-right');
         var episodeText = rightContainer.children('p').eq(0).text().replace("\<strong>Episode:</strong>", '');
+        console.log(episodeText);
         movieInfo.length = rightContainer.children('p').eq(1).text().replace("\<strong>Duration:</strong>", '');
         movieInfo.quality = rightContainer.children('p').eq(2).find('span').first().text();
-        movieInfo.year = rightContainer.children('p').eq(1).text().replace("\<strong>Release:</strong>", '');
+        mInfo.year = rightContainer.children('p').eq(3).text().replace("\<strong>Release:</strong>", '');
 
         callback(movieInfo);
     })
