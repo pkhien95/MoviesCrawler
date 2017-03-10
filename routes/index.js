@@ -3,6 +3,10 @@ var router = express.Router();
 var request = require('request');
 var cheerio = require('cheerio');
 var phantom = require('phantom');
+var webdriver = require('selenium-webdriver');
+var chrome = require('selenium-webdriver/chrome');
+var path = require('chromedriver').path;
+var encode = require('./encode');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -23,51 +27,69 @@ router.get("/phantom", function (req, res) {
     testPhantom();
 });
 
+router.get("/sele", function (req, res) {
+    var url = "https://123movies.is/film/lucha-underground-season-1-19666/watching.html"
+    testSelenium(url, function (src) {
+        res.send(src);
+    });
+});
+
 router.get("/crawl", function (req, res) {
+    var url = "https://123movies.is/movie/filter/all/latest/all/all/all/all/all/1";
+    crawl(url, function (movieList) {
+        res.setHeader('Content-Type', 'application/json');
+        res.send(JSON.stringify(movieList, null, 3));
+    })
+});
 
-    var options = {
-        method: 'GET',
-        url: 'https://123movies.is/movie/filter/all',
-        headers: {
-            'cache-control': 'no-cache'
+router.get("/watch", function (req, res) {
+    var epId = req.query.epId;
+    getEpisodeUrl(epId, function (result) {
+        if (result != '') {
+            res.setHeader('Content-Type', 'application/json');
+            res.send(JSON.stringify(result, null, 3));
         }
-    };
+        else {
+            res.send('No URL')
+        }
+    });
+});
 
-    getMovieList(options, function (html) {
+function crawl(url, callback) {
+    var result = [];
+    request(urlToOptions(url), function (err, response, html) {
         var $ = cheerio.load(html);
-        $('.movies-list').each(function (i, element) {
+        var moviesListDiv = $('.movies-list');
+        moviesListDiv.each(function (index) {
             var movieList = $(this).children().find("a");
-            movieList.each(function (i, element) {
+            movieList.each(function (i) {
                 var movie = {
                     title: "",
                     watchLink: "",
-                    infoLink: "",
                     thumb: "",
                     movieInfo: ""
                 };
                 movie.title = $(this).attr('title');
                 movie.watchLink = $(this).attr('href');
-                movie.infoLink = $(this).attr("data-url");
                 movie.thumb = $(this).children("img").attr("data-original");
+                setTimeout(function () {
+                    getMovieInfo(urlToOptions(movie.watchLink), function (movieInfo) {
+                        movie.movieInfo = movieInfo;
 
-                getMovieInfo(urlToOptions(movie.infoLink), function (movieInfo) {
-                    movie.movieInfo = movieInfo;
+                        result.push(movie);
 
-                    getVideoLink(movie.watchLink, function (videoURL) {
-                        movie.watchLink = videoURL;
-                        console.log(movie);
-                        console.log("\n")
+                        if (result.length == movieList.length) {
+                            callback(result);
+                            return;
+                        }
+                        // getVideoLink(movie.watchLink, function (videoURL) {
+                        //     movie.watchLink = videoURL;
+                        //
+                        // });
                     });
-
-                });
+                }, 300);
             });
         })
-    });
-});
-
-function getMovieList(options, callback) {
-    request(options, function (error, response, html) {
-        callback(html)
     });
 }
 
@@ -76,101 +98,146 @@ function getMovieInfo(options, callback) {
         var $ = cheerio.load(html);
         var data = $(this);
         var movieInfo = {
-            quality: "",
-            idmb: "",
-            year: "",
-            length: "",
-            description: "",
+            genre: [],
+            actor: [],
+            director: "",
             country: [],
-            genre: []
+            trailer: "",
+            description: "",
+            length: '',
+            year: '',
+            quality: '',
+            rating: ''
         };
-        movieInfo.quality = $(".jtip-quality").first().text();
-        movieInfo.idmb = $(".jtip-top").children().eq(0).text();
-        movieInfo.year = $(".jtip-top").children().eq(1).text();
-        movieInfo.length = $(".jtip-top").children().eq(2).text();
-        movieInfo.description = $(".f-desc").first().text();
-        var countries = $(".block").first().children("a");
-        countries.each(function (i, arr) {
-            movieInfo.country.push($(this).text())
+
+        var leftContainer = $('.mvici-left');
+        leftContainer.children('p').eq(0).find('a').each(function (index, element) {
+            movieInfo.genre.push($(this).attr('title'));
         });
-        var genre = $(".block").first().next().children("a");
-        genre.each(function (i, arr) {
-            movieInfo.genre.push($(this).text())
-        });
+
         callback(movieInfo);
     })
 }
 
-function getVideoLink(watchUrl, callback) {
-    var requestUrl = watchUrl + "/watching.html";
-    request(urlToOptions(requestUrl), function (error, response, html) {
-        var $ = cheerio.load(html);
-        var videoURL = jwplayer("media-player").getPlaylist();
-        callback(videoURL);
-    })
-}
-
 function testPhantom() {
-    
-
     phantom.create().then(function (ph) {
         ph.createPage().then(function (page) {
-            // page.set('settings', {
-            //     userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.97 Safari/537.11",
-            //     javascriptEnabled: true,
-            //     loadImages: true
-            // });
-
-
-
-            page.open('https://123movies.is/film/chicago-justice-season-1-19661/watching.html').then(function (status) {
+            var url = "https://123movies.is/film/chicago-justice-season-1-19661/watching.html";
+            page.open(url).then(function (status) {
                 console.log(status);
-
-
-
-                page.property('resourceReceived', function(rs, networkRequest) {
-                    console.log('resourceReceived');
-
-                    page.evaluate(function () {
-                        console.log("getElementsByClassName");
-                        return document.getElementsByClassName("jw-media");
-                    }).then(function (jsondata) {
-                        console.log("media-loaded");
-                        console.log(jsondata);
+                if (status !== 'success') {
+                    console.log('Unable to load the address!');
+                    ph.exit();
+                } else {
+                    page.setting('javascriptEnabled').then(function (value) {
+                        expect(value).toEqual(true);
                     });
-                });
 
-                // page.property('content').then(function(content) {
-                //     // var $ = cheerio.load(content);
-                //     console.log(content);
-                //     page.close();
-                //     ph.exit();
-                // });
-                // page.evaluate(function() {
-                //     console.log(jwplayer("media-player").getPlaylist());
-                // });
-                // page.property('resourceReceived', function(status) {
-                //     console.log(status);
-                //     page.evaluate(function () {
-                //         return jwplayer('media-player').getPlaylist();
-                //     }).then(function (jsondata) {
-                //         console.log("media-loaded");
-                //         console.log(jsondata);
-                //     });
-                // });
-                // if (status === "success") {
-                //     page.evaluate(function () {
-                //         // lastest version on the web
-                //         console.log("media-player-data:", jwplayer('media-player').getPlaylist());
-                //         page.close()
-                //         ph.exit()
-                //     });
-                // } else {
-                //     phantom.exit(1);
-                // }
+                    page.on('onInitialized', function () {
+                        page.evaluate(function () {
+                            window.navigator = {
+                                plugins: {"Shockwave Flash": {description: "Shockwave Flash 11.2 e202"}},
+                                mimeTypes: {"application/x-shockwave-flash": {enabledPlugin: true}}
+                            };
+                        }).then(function (result) {
+
+                        });
+                    });
+
+                    setTimeout(function () {
+                        // page.property('content').then(function (content) {
+                        //     console.log(content);
+                        //     page.close();
+                        //     ph.exit();
+                        // });
+
+
+                        page.evaluateJavaScript('function() { return jwplayer("media-player").getPlaylist(); }').then(function (object) {
+                            console.log(object);
+                        });
+                    }, 20000); // Change timeout as required to allow sufficient time
+                }
             });
         });
     });
+}
+
+function testSelenium(url, callback) {
+    var webdriver = require('selenium-webdriver');
+
+    // var options = new ChromeOptions();
+    // options.addArguments("--test-type");
+
+    var driver = new webdriver.Builder()
+        .forBrowser('chrome')
+        .build();
+
+
+    driver.get(url);
+    // setTimeout(function () {
+    //
+    // // }, 1000);
+    var video = driver.findElement(webdriver.By.tagName('video'));
+    video.getAttribute('src')
+        .then(function (src) {
+            callback(src)
+        });
+    driver.quit();
+}
+
+
+var testResult = function (html) {
+
+    console.log(html);
+}
+
+function checkReadyState(page, callback) {
+    setTimeout(function () {
+        var readyState = page.evaluate(function () {
+            return document.readyState;
+        });
+
+        if ("complete" === readyState) {
+            callback()
+        } else {
+            checkReadyState();
+        }
+    });
+}
+
+function getEpisodeUrl(epId, callback) {
+    var hash = encode.getHash(epId);
+    var cookie = encode.getCookie(epId);
+
+    var options = {
+        method: 'GET',
+        url: 'https://123movies.is/ajax/v2_get_sources/' + epId + '?hash=' + hash,
+        headers: {
+            cookie: cookie,
+            'cache-control': 'no-cache',
+            'User-Agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Mobile Safari/537.36'
+        }
+    };
+    var result = [];
+
+    request(options, function (err, response, body) {
+            if (err) throw  err;
+            else {
+                if (body != '') {
+                    body = JSON.parse(body);
+                    var sources = body.playlist[0].sources;
+                    sources.forEach(function (source) {
+                        result.push(source.file);
+                    });
+                    callback(result);
+                }
+                else {
+                    callback('');
+                }
+            }
+        }
+    )
+    ;
 }
 
 function urlToOptions(url) {
@@ -179,8 +246,9 @@ function urlToOptions(url) {
         url: url,
         headers: {
             'Cache-Control': 'no-cache',
-            'User-Agent': 'Macbook Pro'
+            'User-Agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Mobile Safari/537.36'
         }
     };
 }
+
 module.exports = router;
