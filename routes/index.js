@@ -125,11 +125,11 @@ function getMovieInfo(options, callback) {
         });
 
         var rightContainer = $('.mvici-right');
-        var episodeText = rightContainer.children('p').eq(0).text().replace("\<strong>Episode:</strong>", '');
+        var episodeText = rightContainer.children('p').eq(0).text().replace("Episode: ", '');
         console.log(episodeText);
-        movieInfo.length = rightContainer.children('p').eq(1).text().replace("\<strong>Duration:</strong>", '');
-        movieInfo.quality = rightContainer.children('p').eq(2).find('span').first().text();
-        movieInfo.year = rightContainer.children('p').eq(3).text().replace("\<strong>Release:</strong>", '');
+        movieInfo.length = rightContainer.children('p').eq(1).text().replace("Duration: ", '');
+        movieInfo.quality = rightContainer.children('p').eq(2).text().replace("Quality: ", '');
+        movieInfo.year = rightContainer.children('p').eq(3).text().replace("Release: ", '');
 
         callback(movieInfo);
     })
