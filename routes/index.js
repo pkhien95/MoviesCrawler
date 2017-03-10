@@ -114,7 +114,9 @@ function getMovieInfo(options, callback) {
         leftContainer.children('p').eq(0).find('a').each(function (index, element) {
             movieInfo.genre.push($(this).attr('title'));
         });
-
+        leftContainer.children('p').eq(1).find('a').each(function (index, element) {
+            movieInfo.actor.push($(this).attr('title'));
+        });
         callback(movieInfo);
     })
 }
