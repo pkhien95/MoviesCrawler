@@ -82,10 +82,10 @@ function crawl(url, callback) {
                             callback(result);
                             return;
                         }
-                        // getVideoLink(movie.watchLink, function (videoURL) {
-                        //     movie.watchLink = videoURL;
-                        //
-                        // });
+                        getEpisodeUrl(movie.watchLink, function (videoURL) {
+                            movie.watchLink = videoURL;
+
+                        });
                     });
                 }, 300);
             });
@@ -131,6 +131,8 @@ function getMovieInfo(options, callback) {
         movieInfo.quality = rightContainer.children('p').eq(2).text().replace("Quality: ", '');
         movieInfo.year = rightContainer.children('p').eq(3).text().replace("Release: ", '');
 
+        movieInfo.rating = $('#movie-mark').text();
+        movieInfo.description = $('.desc').text();
         callback(movieInfo);
     })
 }
