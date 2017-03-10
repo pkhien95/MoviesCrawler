@@ -100,7 +100,7 @@ function getMovieInfo(options, callback) {
         var movieInfo = {
             genre: [],
             actor: [],
-            director: "",
+            director: [],
             country: [],
             trailer: "",
             description: "",
@@ -116,6 +116,9 @@ function getMovieInfo(options, callback) {
         });
         leftContainer.children('p').eq(1).find('a').each(function (index, element) {
             movieInfo.actor.push($(this).attr('title'));
+        });
+        leftContainer.children('p').eq(1).find('a').each(function (index, element) {
+            movieInfo.director.push($(this).attr('title'));
         });
         callback(movieInfo);
     })
