@@ -120,6 +120,26 @@ function getMovieInfo(options, callback) {
         leftContainer.children('p').eq(2).find('a').each(function (index, element) {
             movieInfo.director.push($(this).attr('title'));
         });
+        leftContainer.children('p').eq(3).find('a').each(function (index, element) {
+            movieInfo.country.push($(this).attr('title'));
+        });
+
+        var rightContainer = $('.mvici-right');
+        rightContainer.children('p').eq(0).find('a').each(function (index, element) {
+            var episodeText = $(this).text().replace("\<strong>Episode:</strong>", '');
+        });
+        rightContainer.children('p').eq(1).find('a').each(function (index, element) {
+            var durationText = $(this).text().replace("\<strong>Duration:</strong>", '');
+            movieInfo.length = durationText;
+        });
+        rightContainer.children('p').eq(2).find('a').each(function (index, element) {
+            movieInfo.quality = $(this).find('span').first().text();
+        });
+        rightContainer.children('p').eq(3).find('a').each(function (index, element) {
+            var releaseText = $(this).text().replace("\<strong>Release:</strong>", '');
+            movieInfo.length = releaseText;
+        });
+
         callback(movieInfo);
     })
 }
