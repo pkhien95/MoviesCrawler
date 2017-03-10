@@ -125,20 +125,10 @@ function getMovieInfo(options, callback) {
         });
 
         var rightContainer = $('.mvici-right');
-        rightContainer.children('p').eq(0).find('a').each(function (index, element) {
-            var episodeText = $(this).text().replace("\<strong>Episode:</strong>", '');
-        });
-        rightContainer.children('p').eq(1).find('a').each(function (index, element) {
-            var durationText = $(this).text().replace("\<strong>Duration:</strong>", '');
-            movieInfo.length = durationText;
-        });
-        rightContainer.children('p').eq(2).find('a').each(function (index, element) {
-            movieInfo.quality = $(this).find('span').first().text();
-        });
-        rightContainer.children('p').eq(3).find('a').each(function (index, element) {
-            var releaseText = $(this).text().replace("\<strong>Release:</strong>", '');
-            movieInfo.length = releaseText;
-        });
+        var episodeText = rightContainer.children('p').eq(0).text().replace("\<strong>Episode:</strong>", '');
+        movieInfo.length = rightContainer.children('p').eq(1).text().replace("\<strong>Duration:</strong>", '');
+        movieInfo.quality = rightContainer.children('p').eq(2).find('span').first().text();
+        movieInfo. = rightContainer.children('p').eq(1).text().replace("\<strong>Release:</strong>", '');
 
         callback(movieInfo);
     })
