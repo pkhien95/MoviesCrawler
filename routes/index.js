@@ -129,7 +129,7 @@ function getMovieInfo(options, callback) {
         console.log(episodeText);
         movieInfo.length = rightContainer.children('p').eq(1).text().replace("\<strong>Duration:</strong>", '');
         movieInfo.quality = rightContainer.children('p').eq(2).find('span').first().text();
-        mInfo.year = rightContainer.children('p').eq(3).text().replace("\<strong>Release:</strong>", '');
+        movieInfo.year = rightContainer.children('p').eq(3).text().replace("\<strong>Release:</strong>", '');
 
         callback(movieInfo);
     })
