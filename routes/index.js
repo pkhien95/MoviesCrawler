@@ -85,10 +85,10 @@ function crawl(url, callback) {
                             callback(result);
                             return;
                         }
-                        getEpisodeUrl(movie.watchLink, function (videoURL) {
-                            movie.watchLink = videoURL;
-
-                        });
+                        // getEpisodeUrl(movie.watchLink, function (videoURL) {
+                        //     movie.watchLink = videoURL;
+                        //
+                        // });
                     });
                 }, 300);
             });
@@ -268,6 +268,7 @@ function urlToOptions(url) {
     return options = {
         method: 'GET',
         url: url,
+        strictSSL: false,
         headers: {
             'Cache-Control': 'no-cache',
             'User-Agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Mobile Safari/537.36'
