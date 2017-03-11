@@ -58,6 +58,9 @@ router.get("/watch", function (req, res) {
 function crawl(url, callback) {
     var result = [];
     request(urlToOptions(url), function (err, response, html) {
+        if (err) {
+            throw new Error(err);
+        }
         var $ = cheerio.load(html);
         var moviesListDiv = $('.movies-list');
         moviesListDiv.each(function (index) {
@@ -95,6 +98,9 @@ function crawl(url, callback) {
 
 function getMovieInfo(options, callback) {
     request(options, function (err, response, html) {
+        if (err) {
+            throw new Error(err);
+        }
         var $ = cheerio.load(html);
         var data = $(this);
         var movieInfo = {
@@ -125,11 +131,11 @@ function getMovieInfo(options, callback) {
         });
 
         var rightContainer = $('.mvici-right');
-        var episodeText = rightContainer.children('p').eq(0).text().replace("Episode: ", '');
-        console.log(episodeText);
-        movieInfo.length = rightContainer.children('p').eq(1).text().replace("Duration: ", '');
-        movieInfo.quality = rightContainer.children('p').eq(2).text().replace("Quality: ", '');
-        movieInfo.year = rightContainer.children('p').eq(3).text().replace("Release: ", '');
+        // var episodeText = rightContainer.children('p').eq(1).text().replace("Episode: ", '');
+        // console.log(episodeText);
+        movieInfo.length = rightContainer.children('p').eq(0).text().replace("Duration: ", '');
+        movieInfo.quality = rightContainer.children('p').eq(1).text().replace("Quality: ", '');
+        movieInfo.year = rightContainer.children('p').eq(2).text().replace("Release: ", '');
 
         movieInfo.rating = $('#movie-mark').text();
         movieInfo.description = $('.addthis_inline_share_toolbox').attr('data-description');
