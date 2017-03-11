@@ -137,7 +137,7 @@ function getMovieInfo(options, callback) {
         movieInfo.quality = rightContainer.children('p').eq(1).text().replace("Quality: ", '');
         movieInfo.year = rightContainer.children('p').eq(2).text().replace("Release: ", '');
 
-        movieInfo.rating = $('#movie-mark').text();
+        movieInfo.rating = $('#movie-mark').html();
         movieInfo.description = $('.addthis_inline_share_toolbox').attr('data-description');
         callback(movieInfo);
     })
