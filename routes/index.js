@@ -28,7 +28,7 @@ router.get("/phantom", function (req, res) {
 });
 
 router.get("/sele", function (req, res) {
-    var url = "https://123movies.is/film/lucha-underground-season-1-19666/watching.html"
+    var url = "https://123movies.is/film/lucha-underground-season-1-19666/watching.html";
     testSelenium(url, function (src) {
         res.send(src);
     });
@@ -63,26 +63,33 @@ function crawl(url, callback) {
         }
         var $ = cheerio.load(html);
         var moviesListDiv = $('.movies-list');
-        moviesListDiv.each(function (index) {
-            var movieList = $(this).children().find("a");
-            movieList.each(function (i) {
-                var movie = {
-                    title: "",
-                    watchLink: "",
-                    thumb: "",
-                    movieInfo: ""
-                };
-                movie.title = $(this).attr('title');
-                movie.watchLink = $(this).attr('href');
-                movie.thumb = $(this).children("img").attr("data-original");
+        var movie = {
+            id: "",
+            title: "",
+            watchLink: "",
+            thumb: "",
+            movieInfo: ""
+        };
+
+        var movieList = moviesListDiv.children();
+
+        movieList.each(function (i) {
+            movie.id = $(this).attr('data-movie-id');
+            movie.title = $(this).find('a').attr('title');
+            movie.watchLink = $(this).find('a').attr('href');
+            movie.thumb = $(this).find('a').children("img").attr("data-original");
+            var ajaxInfoLink = "";
+            ajaxInfoLink = $(this).children('a').attr('data-url');
+            console.log(ajaxInfoLink);
+            if(ajaxInfoLink != undefined){
                 setTimeout(function () {
-                    getMovieInfo(urlToOptions(movie.watchLink), function (movieInfo) {
+                    getMovieInfoAjax(urlToOptions(ajaxInfoLink), function (movieInfo) {
                         movie.movieInfo = movieInfo;
 
                         result.push(movie);
 
                         if (result.length == movieList.length) {
-                            callback(result);
+
                             return;
                         }
                         // getEpisodeUrl(movie.watchLink, function (videoURL) {
@@ -90,19 +97,23 @@ function crawl(url, callback) {
                         //
                         // });
                     });
+
+
                 }, 300);
-            });
-        })
+            }
+
+
+        });
     });
 }
 
-function getMovieInfo(options, callback) {
+function getMovieInfoAjax(options, callback) {
     request(options, function (err, response, html) {
         if (err) {
             throw new Error(err);
         }
         var $ = cheerio.load(html);
-        var data = $(this);
+
         var movieInfo = {
             genre: [],
             actor: [],
@@ -115,6 +126,34 @@ function getMovieInfo(options, callback) {
             quality: '',
             rating: ''
         };
+
+        movieInfo.quality = $('.jtip-quality').text();
+        movieInfo.year = $('.jt-info').eq(1).text();
+        movieInfo.length = $('.jt-info').eq(2).text();
+        movieInfo.description = $('.f-desc').text();
+
+        var blocks = $('.block');
+
+        blocks.eq(0).find('a').each(function (index, element) {
+            movieInfo.country.push($(this).text());
+        });
+
+        blocks.eq(1).find('a').each(function (index, element) {
+            movieInfo.genre.push($(this).text());
+        })
+
+        callback(movieInfo);
+    });
+}
+
+function getMovieInfo(options, callback) {
+    request(options, function (err, response, html) {
+        if (err) {
+            throw new Error(err);
+        }
+        var $ = cheerio.load(html);
+        var data = $(this);
+
 
         var leftContainer = $('.mvici-left');
         leftContainer.children('p').eq(0).find('a').each(function (index, element) {
@@ -268,7 +307,6 @@ function urlToOptions(url) {
     return options = {
         method: 'GET',
         url: url,
-        strictSSL: false,
         headers: {
             'Cache-Control': 'no-cache',
             'User-Agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Mobile Safari/537.36'
